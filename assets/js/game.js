@@ -11,29 +11,29 @@ $(document).ready(function(){
 	var randomNumber = Math.round(Math.random() * 100) + 10;
 	console.log('random number: ' + randomNumber);
 
-	var greenNumber = Math.round(Math.random() * 20);
+	var greenNumber = Math.round(Math.random() * 20) + 1;
 
-	var redNumber = Math.round(Math.random() * 20);
+	var redNumber = Math.round(Math.random() * 20) + 1;
 
-	var blueNumber = Math.round(Math.random() * 20);
+	var blueNumber = Math.round(Math.random() * 20) + 1;
 
-	var purpleNumber = Math.round(Math.random() * 20);
+	var purpleNumber = Math.round(Math.random() * 20) + 1;
 
 
 	function reset() {
 		score = 0;
-		
+
 		randomNumber = Math.round(Math.random() * 100) + 10;
 		console.log('new random number: ' + randomNumber);
 		$('#randomNumber').html(randomNumber);
 
-		greenNumber = Math.round(Math.random() * 20);
+		greenNumber = Math.round(Math.random() * 20) + 1;
 
-		redNumber = Math.round(Math.random() * 20);
+		redNumber = Math.round(Math.random() * 20) + 1;
 
-		blueNumber = Math.round(Math.random() * 20);
+		blueNumber = Math.round(Math.random() * 20) + 1;
 
-		purpleNumber = Math.round(Math.random() * 20);
+		purpleNumber = Math.round(Math.random() * 20) + 1;
 	}
 
 
@@ -65,6 +65,7 @@ $(document).ready(function(){
 
 	$('#green').on('click', function() {
 		console.log('green: ' + greenNumber);
+		$('#greenNumber').html(greenNumber);
 		score += greenNumber;
 		$('#score').html(score);
 		message();
@@ -72,6 +73,7 @@ $(document).ready(function(){
 
 	$('#red').on('click', function() {
 		console.log('red: ' + redNumber);
+		$('#redNumber').html(redNumber);
 		score += redNumber;
 		$('#score').html(score);
 		message();
@@ -79,6 +81,7 @@ $(document).ready(function(){
 
 	$('#blue').on('click', function() {
 		console.log('blue: ' + blueNumber);
+		$('#blueNumber').html(blueNumber);
 		score += blueNumber;
 		$('#score').html(score);
 		message();
@@ -86,6 +89,7 @@ $(document).ready(function(){
 
 	$('#purple').on('click', function() {
 		console.log('purple: ' + purpleNumber);
+		$('#purpleNumber').html(purpleNumber);
 		score += purpleNumber;
 		$('#score').html(score);
 		message();
